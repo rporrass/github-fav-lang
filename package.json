@@ -1,0 +1,30 @@
+{
+  "private": true,
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/lab",
+    "cov": "./node_modules/.bin/lab -t 100",
+    "stylish": "./node_modules/.bin/jshint --reporter node_modules/jshint-stylish/stylish.js lib test",
+    "jscs": "./node_modules/.bin/jscs --config=./.jscsrc lib test",
+    "lint": "npm run stylish & npm run jscs"
+  },
+  "devDependencies": {
+    "code": "^1.2.1",
+    "jscs": "^1.7.3",
+    "jshint": "^2.9.1",
+    "jshint-stylish": "^1.0.0",
+    "lab": "^5.1.0",
+    "sinon": "^1.17.3"
+  },
+  "dependencies": {
+    "argparse": "^1.0.7",
+    "async": "^2.0.0-rc.4",
+    "github": "^0.2.4",
+    "lodash": "^4.11.2"
+  },
+  "bin": {
+    "snippet": "./solution.js"
+  }
+}
